@@ -1,19 +1,21 @@
+fun main(){
+//    var coldCoffeeVariable=coldCoffee
+//    coldCoffeeVariable()
+    var bevarage=chooseBevarage(2) {
 
-    fun main(){
-     var milkshakevariable : ()->Unit=chooseBevarage(scoops)
-        milkshakevariable()
+        "I took $it scoops"
     }
+    bevarage()
+}
+var coldCoffee : () ->Unit={
 
-    var coldCoffee:()->Unit ={
-        println("I took a Cold coffee")
-    }
-    var milkShake : ()->Unit={
-      println("I took a milkshake")
-    }
-    var scoops : (Int)->String={numberOfScoops->
-        "I took $numberOfScoops scoops for my drink"
-    }
-fun chooseBevarage(scoops:(Int)->String) : ()->Unit{
-    println(scoops(2))
-    return milkShake
+    println("I choose a ColdCoffe")
+}
+var milkshake : ()->Unit={
+    println("I choose a milkshake")
+}
+
+fun chooseBevarage( car :Int, scoop:(Double)->String) : ()->Unit{
+    println(scoop(2.0))
+    return milkshake
 }
